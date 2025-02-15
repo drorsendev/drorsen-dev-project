@@ -1,0 +1,10 @@
+# Ignorera virtuella miljön
+venv/
+
+# Pycache
+__pycache__/
+*.py[cod]
+
+# Ev. systemfiler och temporära filer
+.DS_Store
+Thumbs.db
