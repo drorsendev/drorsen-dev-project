@@ -8,3 +8,7 @@ __pycache__/
 # Ev. systemfiler och temporära filer
 .DS_Store
 Thumbs.db
+
+#historik filer vill jag inte spara
+
+.history/
