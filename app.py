@@ -1,3 +1,4 @@
+import os
 from flask import Flask, jsonify
 from sqlalchemy.orm import sessionmaker
 from engine_config import engine
@@ -28,4 +29,5 @@ def get_products():
     return jsonify(data)  # Returnerar JSON med alla produkter
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Läs in PORT från miljövariabel (används i Azure)
+    app.run(debug=True, host="0.0.0.0", port=port)  # Lyssnar på alla nätverksgränssnitt
